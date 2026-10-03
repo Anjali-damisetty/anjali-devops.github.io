@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anjali Damisetty | DevOps Engineer</title>
+
+    <meta name="description"
+          content="Portfolio of Anjali Damisetty, a DevOps Engineer experienced in AWS, Kubernetes, Docker and CI/CD.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid #1f2937;
+            padding: 18px 8%;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #60a5fa;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 1px solid #60a5fa;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            color: #60a5fa;
+        }
+
+        .btn-secondary:hover {
+            background: #172554;
+        }
+
+        /* Sections */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 20px;
+        }
+
+        .section-title {
+            font-size: 35px;
+            margin-bottom: 35px;
+            color: white;
+        }
+
+        .section-title span {
+            color: #60a5fa;
+        }
+
+        .about-text {
+            color: #94a3b8;
+            font-size: 17px;
+            max-width: 850px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .skill {
+            background: #111827;
+            border: 1px solid #1f2937;
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-4px);
+            border-color: #60a5fa;
+        }
+
+        /* Experience */
+        .card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .card h3 {
+            color: white;
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .card .date {
+            color: #60a5fa;
+            margin-bottom: 20px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            color: #94a3b8;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+        }
+
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .project-card h3 {
+            color: #60a5fa;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #60a5fa;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1f2937;
+            color: #64748b;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">AD.</div>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <h1>Anjali Damisetty</h1>
+
+            <h2>DevOps Engineer</h2>
+
+            <p>
+                DevOps Engineer with experience in AWS, Kubernetes,
+                Docker and CI/CD, with a focus on cloud infrastructure,
+                deployment operations and troubleshooting.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <p class="about-text">
+            I am a DevOps Engineer with experience supporting CI/CD,
+            AWS cloud environments, Docker-based workflows and
+            Kubernetes/EKS deployment operations.
+
+            My experience includes working with Jenkins, GitLab CI,
+            Docker, Kubernetes, AWS and Linux environments.
+
+            I have also worked on a personal AWS automation project
+            using Terraform, Docker and GitHub Actions to build an
+            end-to-end CI/CD workflow.
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            Technical <span>Skills</span>
+        </h2>
+
+        <div class="skills-grid">
+
+            <div class="skill">AWS</div>
+            <div class="skill">Kubernetes</div>
+            <div class="skill">Docker</div>
+            <div class="skill">Terraform</div>
+            <div class="skill">Jenkins</div>
+            <div class="skill">GitLab CI</div>
+            <div class="skill">GitHub Actions</div>
+            <div class="skill">Linux</div>
+            <div class="skill">AWS EKS</div>
+            <div class="skill">AWS EC2</div>
+            <div class="skill">IAM</div>
+            <div class="skill">Amazon S3</div>
+            <div class="skill">CloudWatch</div>
+            <div class="skill">Bash</div>
+            <div class="skill">Python</div>
+            <div class="skill">JFrog Artifactory</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Experience -->
+    <section id="experience">
+
+        <h2 class="section-title">
+            Work <span>Experience</span>
+        </h2>
+
+        <div class="card">
+
+            <h3>Verizon</h3>
+
+            <div class="date">
+                DevOps / Cloud Operations | Jul 2024 – Dec 2025
+            </div>
+
+            <ul>
+
+                <li>
+                    Supported CI/CD workflows using Jenkins and GitLab CI.
+                </li>
+
+                <li>
+                    Supported AWS cloud environments and deployment operations.
+                </li>
+
+                <li>
+                    Supported Kubernetes/EKS deployment operations,
+                    rollout updates and deployment validation.
+                </li>
+
+                <li>
+                    Worked with Docker images and JFrog Artifactory
+                    for artifact storage and version management.
+                </li>
+
+                <li>
+                    Used Sysdig to scan Docker images for vulnerabilities
+                    and support remediation activities.
+                </li>
+
+                <li>
+                    Investigated CI/CD and infrastructure deployment
+                    issues through troubleshooting and log analysis.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2 class="section-title">
+            Featured <span>Project</span>
+        </h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+
+                <h3>
+                    End-to-End CI/CD Pipeline on AWS
+                </h3>
+
+                <p>
+                    Built a personal CI/CD project using GitHub Actions,
+                    Docker, Docker Hub, Terraform and AWS EC2.
+
+                    Terraform was used to provision EC2 infrastructure,
+                    security configuration, IAM configuration and an
+                    Elastic IP.
+
+                    GitHub Actions automated the Docker build and
+                    deployment workflow.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Kubernetes / EKS Operations
+                </h3>
+
+                <p>
+                    Hands-on experience working with Kubernetes deployment
+                    operations including checking Pods and Deployments,
+                    reviewing logs, describing resources and troubleshooting
+                    deployment issues.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Certification -->
+    <section>
+
+        <h2 class="section-title">
+            Certification
+        </h2>
+
+        <div class="card">
+
+            <h3>AWS Certified Cloud Practitioner</h3>
+
+            <div class="date">
+                Amazon Web Services — September 2025
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            Let's <span>Connect</span>
+        </h2>
+
+        <p>
+            I'm open to DevOps, Cloud and Infrastructure opportunities.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:anjalidamisetty@gmail.com">
+                Email
+            </a>
+
+            <a href="https://github.com/anjali-devops" target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/anjali-damisetty" target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        © 2026 Anjali Damisetty. Built with HTML & CSS.
+
+    </footer>
+
+</body>
+</html>
